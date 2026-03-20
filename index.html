@@ -16,15 +16,38 @@
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <title>Nuestra Boda</title>
 </head>
 
 <body class="bg-gray-100 flex justify-center">
-
     <!-- Tarjeta centrada estilo móvil -->
     <div class="w-full max-w-md min-h-screen px-6 py-10 shadow-lg">
+
+        <div id="introScreen" class="fixed inset-0 bg-white flex items-center justify-center z-50 cursor-pointer 
+            transition-opacity duration-700 ease-in-out opacity-100">
+
+            <div class="text-center">
+                <p class="text-lg tracking-widest uppercase bg-black text-white px-4 py-2 rounded-full">
+                    Toca para comenzar
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Musica -->
+        <audio id="bgMusic" autoplay loop>
+            <source src="./multimedia/cancion.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="bg-[#d5d5d5] w-full h-[50px] mb-5 flex items-center px-4 gap-3">
+            <button id="pauseBtn" class="bg-black text-white px-4 py-1 rounded-full">
+                Pausar música
+            </button>
+            <p style="font-family: 'Libre Baskerville', sans-serif;">Nuestra Cancion</p>
+        </div>
 
         <!-- ================= ENCABEZADO ================= -->
         <div class="w-full border-t-2 border-b-4 border-black flex text-[11px] h-[70px]">
@@ -132,8 +155,10 @@
             <div class="flex mt-6 " style="font-family: 'Cinzel', serif;">
                 <div class="gap-1 text-center w-1/2">
                     <span class="block uppercase mb-[6px] text-[13px] font-bold">padres del novio</span>
-                    <span class="block text-[13px]" style="font-family: 'Cormorant Garamond', serif;">Víctor Rodríguez </span>
-                    <span class="block text-[13px]" style="font-family: 'Cormorant Garamond', serif;">Zoraida Rojas </span>
+                    <span class="block text-[13px]" style="font-family: 'Cormorant Garamond', serif;">Víctor Rodríguez
+                    </span>
+                    <span class="block text-[13px]" style="font-family: 'Cormorant Garamond', serif;">Zoraida Rojas
+                    </span>
                 </div>
 
                 <div class="flex flex-col items-center justify-center ">
@@ -144,8 +169,10 @@
 
                 <div class="gap-1 text-center w-1/2">
                     <span class="block uppercase mb-[6px] text-[13px] font-bold">padres de la novia</span>
-                    <span class="block text-[13px]" style="font-family: 'Cormorant Garamond', serif;">Maria Adelina García Martínez</span>
-                    <span class="block text-[13px]" style="font-family: 'Cormorant Garamond', serif;">Joselito Mora Montero</span>
+                    <span class="block text-[13px]" style="font-family: 'Cormorant Garamond', serif;">Maria Adelina
+                        García Martínez</span>
+                    <span class="block text-[13px]" style="font-family: 'Cormorant Garamond', serif;">Joselito Mora
+                        Montero</span>
                 </div>
             </div>
 
@@ -155,8 +182,10 @@
 
             <div class="gap-1 text-center mt-5 w-full" style="font-family: 'Cinzel', serif;">
                 <span class="block uppercase mb-[6px] text-[13px] font-bold">nuestros padrinos de honor</span>
-                <span class="block text-[13px]" style="font-family: 'Cormorant Garamond', serif;">Víctor Manuel Rodríguez</span>
-                <span class="block text-[13px]" style="font-family: 'Cormorant Garamond', serif;">María Fernanda barrero mora</span>
+                <span class="block text-[13px]" style="font-family: 'Cormorant Garamond', serif;">Víctor Manuel
+                    Rodríguez</span>
+                <span class="block text-[13px]" style="font-family: 'Cormorant Garamond', serif;">María Fernanda barrero
+                    mora</span>
             </div>
 
             <span class="flex justify-center text-[22px] uppercase w-full mt-5" style="font-family: 'Cinzel', serif;">
@@ -166,78 +195,87 @@
         </div>
 
         <!-- ================= IMAGEN ================= -->
-         <div class="mt-1 py-4 border-t-2 border-black">
+        <div class="mt-1 py-4 border-t-2 border-black">
             <img class="w-full object-cover" src="./multimedia/2.jpeg" alt="">
         </div>
 
         <!-- ================= NUETSRA HISTORIA ================= -->
 
         <div class="w-full h-[50px] flex mt-2">
-                <div class="w-[130px] border-b-2 border-black h-1/2">
+            <div class="w-[130px] border-b-2 border-black h-1/2">
 
-                </div>
+            </div>
 
-                <div class="flex justify-center items-center text-[32px] w-full h-full "
-                    style="font-family: 'Great Vibes', cursive;">
-                    <span>Nuestra Historia</span>
-                </div>
+            <div class="flex justify-center items-center text-[32px] w-full h-full "
+                style="font-family: 'Great Vibes', cursive;">
+                <span>Nuestra Historia</span>
+            </div>
 
-                <div class="w-[130px] border-b-2 border-black h-1/2">
+            <div class="w-[130px] border-b-2 border-black h-1/2">
 
-                </div>
+            </div>
         </div>
 
         <div class="flex mt-3">
-            <div class="w-1/2 text-[19.5px] leading-6" style="font-family: 'Crimson Text', serif;" data-aos="fade-right">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ipsam esse animi veniam nihil impedit non nemo vitae illum, quo soluta reprehenderit eos ad eum quis minima unde. Dolor, ipsam!
-                Laborum libero id perspiciatis commodi! Neque architecto autem, libero sint aut facere unde modi ducimus odit ipsum nisi beatae eligendi veniam praesentium culpa eos? Asperiores sit eum dignissimos pariatur suscipit?
-                Magni eos quo aspernatur, sapiente atque quod minima. Numquam fuga inventore asperiores eos cumque dolorum aliquam natus porro maiores quisquam nemo aut necessitatibus quos cum, optio officia aperiam ea sapiente.</p>
+            <div class="w-1/2 text-[19.5px] leading-6" style="font-family: 'Crimson Text', serif;"
+                data-aos="fade-right">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ipsam esse animi veniam nihil
+                    impedit non nemo vitae illum, quo soluta reprehenderit eos ad eum quis minima unde. Dolor, ipsam!
+                    Laborum libero id perspiciatis commodi! Neque architecto autem, libero sint aut facere unde modi
+                    ducimus odit ipsum nisi beatae eligendi veniam praesentium culpa eos? Asperiores sit eum dignissimos
+                    pariatur suscipit?
+                    Magni eos quo aspernatur, sapiente atque quod minima. Numquam fuga inventore asperiores eos cumque
+                    dolorum aliquam natus porro maiores quisquam nemo aut necessitatibus quos cum, optio officia aperiam
+                    ea sapiente.</p>
             </div>
 
             <div class="w-1/2 pl-5 flex flex-col items-end gap-4">
-                <img class="rounded-lg" src="./multimedia/3.jpeg" alt="" data-aos="fade-up"
-             data-aos-delay="100">
-                <img class="rounded-lg" src="./multimedia/4.jpeg" alt="" data-aos="fade-up"
-             data-aos-delay="250">
-                <img class="rounded-lg" src="./multimedia/5.jpeg" alt="" data-aos="fade-up"
-             data-aos-delay="400">
+                <img class="rounded-lg" src="./multimedia/3.jpeg" alt="" data-aos="fade-up" data-aos-delay="100">
+                <img class="rounded-lg" src="./multimedia/4.jpeg" alt="" data-aos="fade-up" data-aos-delay="250">
+                <img class="rounded-lg" src="./multimedia/5.jpeg" alt="" data-aos="fade-up" data-aos-delay="400">
             </div>
         </div>
 
         <!-- ================= PROGRAMA DE LA BODA ================= -->
-         <div class="w-full h-[50px] flex mt-6">
-                <div class="w-[130px] border-b-2 border-black h-1/2">
+        <div class="w-full h-[50px] flex mt-6">
+            <div class="w-[130px] border-b-2 border-black h-1/2">
 
-                </div>
+            </div>
 
-                <div class="flex justify-center items-center text-[32px] w-full h-full "
-                    style="font-family: 'Great Vibes', cursive;">
-                    <span>Programa de boda</span>
-                </div>
+            <div class="flex justify-center items-center text-[32px] w-full h-full "
+                style="font-family: 'Great Vibes', cursive;">
+                <span>Programa de boda</span>
+            </div>
 
-                <div class="w-[130px] border-b-2 border-black h-1/2">
+            <div class="w-[130px] border-b-2 border-black h-1/2">
 
-                </div>
+            </div>
         </div>
 
         <div class="mt-6 flex" style="font-family: 'Crimson Text', serif;">
             <div class="w-1/2 gap-5 flex flex-col">
-                <div class="bg-[#d5d5d5] rounded-lg border-[1px] text-[18px] border-black py-4 flex flex-col items-center justify-center">
+                <div
+                    class="bg-[#d5d5d5] rounded-lg border-[1px] text-[18px] border-black py-4 flex flex-col items-center justify-center">
                     <span class="font-extrabold text-[21px]">Ceremonia Religiosa</span>
                     <div class="bg-black h-[2px] w-[150px] my-1"></div>
                     <sapn class="mt-3">Hora 06:30 pm</sapn>
                     <sapn>"Iglesia San José obrero"</sapn>
                     <sapn>Puerto Boyacá</sapn>
-                    <a href="https://maps.app.goo.gl/MR2dgoW2Mvfsgz5q7" target="_blank" class="bg-[#616161] rounded-lg py-[4px] px-[28px] mt-5 flex justify-center items-center text-white">Ver mapa</a>
+                    <a href="https://maps.app.goo.gl/MR2dgoW2Mvfsgz5q7" target="_blank"
+                        class="bg-[#616161] rounded-lg py-[4px] px-[28px] mt-5 flex justify-center items-center text-white">Ver
+                        mapa</a>
                 </div>
 
-                <div class="bg-[#d5d5d5] rounded-lg border-[1px] text-[18px] border-black py-4 flex flex-col items-center justify-center">
+                <div
+                    class="bg-[#d5d5d5] rounded-lg border-[1px] text-[18px] border-black py-4 flex flex-col items-center justify-center">
                     <span class="font-extrabold text-[21px]">Recepcion</span>
                     <div class="bg-black h-[2px] w-[150px] my-1"></div>
                     <sapn class="mt-3">Hora XX:XX pm</sapn>
                     <sapn>"XXXXXXXXX"</sapn>
                     <sapn>Puerto Boyacá</sapn>
-                    <a href="#" target="_blank" class="bg-[#616161] rounded-lg py-[4px] px-[28px] mt-5 flex justify-center items-center text-white">Ver mapa</a>
+                    <a href="#" target="_blank"
+                        class="bg-[#616161] rounded-lg py-[4px] px-[28px] mt-5 flex justify-center items-center text-white">Ver
+                        mapa</a>
                 </div>
             </div>
 
@@ -248,10 +286,27 @@
 
         <!-- ================= NO NIÑOS ================= -->
 
-        <p style="font-family: 'Crimson Text', serif;" class="bg-[#616161] mt-6 text-white text-[17px] p-5 leading-1 text-center rounded-xs">Amamos a los niños, pero creemos que esta noche se merecen disfrutar solos como pareja, por eso en esta ocasión será solo para adultos.</p>
+        <p style="font-family: 'Crimson Text', serif;"
+            class="bg-[#616161] mt-6 text-white text-[17px] p-5 leading-1 text-center rounded-xs">Amamos a los niños,
+            pero creemos que esta noche se merecen disfrutar solos como pareja, por eso en esta ocasión será solo para
+            adultos.
+        </p>
+
+        <!-- ================= PROGRAMA DE LA BODA ================= -->
+        <div class="w-full h-[50px] flex mt-6">
+            <div class="w-[160px] border-b-2 border-black h-1/2">
+            </div>
+
+            <div class="flex justify-center items-center text-[32px] w-full h-full "
+                style="font-family: 'Great Vibes', cursive;">
+                <span>Faltan</span>
+            </div>
+
+            <div class="w-[160px] border-b-2 border-black h-1/2">
+            </div>
+        </div>
 
 
-        <!-- CONTADOR 
         <div class="w-full flex justify-center" style="font-family: 'Cinzel', serif;">
 
             <div class="grid grid-cols-4 gap-4 text-center w-full">
@@ -285,10 +340,7 @@
                 </div>
 
             </div>
-
         </div>
-        -->
-
     </div>
 
     <!-- SCRIPT CONTADOR -->
@@ -347,10 +399,42 @@
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 1000,   // duración animación
-    once: true        // solo se anima una vez
-  });
+    AOS.init({
+        duration: 1000,   // duración animación
+        once: true        // solo se anima una vez
+    });
+
+
+    const music = document.getElementById("bgMusic");
+    const btn = document.getElementById("pauseBtn");
+
+    btn.addEventListener("click", () => {
+        if (music.paused) {
+            music.play();
+            btn.textContent = "Pausar música";
+        } else {
+            music.pause();
+            btn.textContent = "Reproducir música";
+        }
+    });
+
+    // Intentar reproducir automáticamente cuando el usuario interactúe
+    document.addEventListener("click", () => {
+        music.play().catch(() => { });
+    }, { once: true });
+
+
+    const intro = document.getElementById("introScreen");
+
+    intro.addEventListener("click", () => {
+        music.play();
+        intro.style.opacity = "0";
+        setTimeout(() => intro.remove(), 500);
+    });
+
+
+
+
 </script>
 
 
